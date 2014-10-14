@@ -8,4 +8,5 @@ end
 
 cookbook_file "webstorm.desktop" do
   path '/usr/share/applications/webstorm.desktop'
+  mode "0644"
 end
