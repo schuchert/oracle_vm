@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=WebStorm
+NoDisplay=false
+Comment=Run WebStorm IDE
+Icon=/usr/local/bin/webstorm/bin/webide.png
+Exec=/usr/local/bin/webstorm/bin/webstorm.sh
+Terminal=false
+Categories=Programming

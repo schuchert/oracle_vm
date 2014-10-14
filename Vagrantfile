@@ -10,6 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vbguest.auto_update = true
 
   config.vm.provision "chef_solo" do |chef|
+   chef.add_recipe "firefox"
    chef.add_recipe "yum-epel"
    chef.add_recipe "build-essential"
    chef.add_recipe "ark"
@@ -17,6 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    chef.add_recipe "desktop"
    chef.add_recipe "to_gui"
    chef.add_recipe "nodejs"
+   chef.add_recipe "webstorm"
   end
 
   config.vm.provider :virtualbox do |vb|
