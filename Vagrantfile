@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
    chef.add_recipe "git"
    chef.add_recipe "firefox"
-#   chef.add_recipe "jdk"
+   chef.add_recipe "jdk"
    chef.add_recipe "nodejs"
    chef.add_recipe "webstorm"
   end
