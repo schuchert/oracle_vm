@@ -1,4 +1,5 @@
-execute "desktop_install" do
-  command "sudo systemctl enable graphical.target --force"
-  action :run
+cookbook_file "inittab" do
+  path "/etc/inittab"
+  mode "0644"
+  action :create
 end

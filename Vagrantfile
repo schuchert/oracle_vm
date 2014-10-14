@@ -5,18 +5,22 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "oracle_7_0"
+  config.vm.box = "oracle_6_5"
   config.omnibus.chef_version = :latest
   config.vbguest.auto_update = true
 
   config.vm.provision "chef_solo" do |chef|
-   chef.add_recipe "firefox"
    chef.add_recipe "yum-epel"
    chef.add_recipe "build-essential"
    chef.add_recipe "ark"
    chef.add_recipe "apt"
+
    chef.add_recipe "desktop"
    chef.add_recipe "to_gui"
+
+   chef.add_recipe "git"
+   chef.add_recipe "firefox"
+#   chef.add_recipe "jdk"
    chef.add_recipe "nodejs"
    chef.add_recipe "webstorm"
   end
